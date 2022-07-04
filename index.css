@@ -8,6 +8,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 #sky-mountain-container {
@@ -26,6 +27,12 @@ body {
   background-image: url("./img/mountain.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#content-slider-container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  overflow: hidden;
 }
 
 /* barra de rolagem */
@@ -161,7 +168,10 @@ section .container > * {
 
 .content {
   color: #fff;
-  transform: translateY(10px);
+  background-color: #175737;
+  /* transform: translateY(10px); */
+  z-index: 20;
+  padding: 1rem;
 }
 
 .title {
@@ -195,32 +205,23 @@ section .container > * {
 }
 
 /* carousel*/
-
-.slider {
-  width: 500px;
-  height: 300px;
-  border-radius: 10px;
-  overflow: none;
-}
-
-.slides {
-  width: 500%;
-  height: 500px;
+.carousel {
   display: flex;
+  align-items: center;
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
 
-.slides input {
-  display: none;
+.carousel > div {
+  flex: none;
+  width: 100%;
+  scroll-snap-align: start;
 }
 
-.slide {
-  width: 20%;
-  transition: 2s;
-}
-
-.slide img {
-  width: 500px;
-  height: 300px;
+.carousel > div > img {
+  width: 100%;
+  object-fit: cover;
 }
 
 /* css dor manual slide navigation */
@@ -410,4 +411,11 @@ a img {
   text-align: center;
   font-size: 13px;
   color: #aaa;
+}
+
+@media screen and (max-width: 720px) {
+  #content-slider-container {
+    display: flex;
+    flex-direction: column;
+  }
 }

@@ -6,6 +6,7 @@
   <link rel="shortcut icon" href="img/logo2.png" />
   <title>Rainforest</title>
   <link rel="stylesheet" href="index.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
@@ -37,13 +38,10 @@
   <section>
     <div class="shadow"></div>
 
-    <div class="container">
-      <div class="content opacity">
-        <h3 class="title">
-          Floresta Amazônica
-          <div class="border"></div>
-        </h3>
-        <p class="text">
+    <div id="content-slider-container">
+      <div class="content">
+        <h3 class="title">Floresta Amazônica</h3>
+        <p>
           A amazônia é uma floresta tropical úmida que se estende pela bacia
           hidrográfica do rio Amazonas, uma vasta área tropical natural, com
           área de aproximadamente 6,74 milhões de km². Há muito tempo a
@@ -55,51 +53,18 @@
         </p>
       </div>
       <!-- image slide start -->
-
-      <div class="slider">
-        <div class="slides">
-          <!-- buttons start -->
-
-          <input type="radio" name="radio-btn" id="radio1" />
-          <input type="radio" name="radio-btn" id="radio2" />
-          <input type="radio" name="radio-btn" id="radio3" />
-          <input type="radio" name="radio-btn" id="radio4" />
-          <!-- buttons end -->
-
-          <!-- slide images start -->
-
-          <div class="slide first">
-            <img src="/img/familiaonça.webp" />
-          </div>
-          <div class="slide">
-            <img src="/img/florestaa.jpg" />
-          </div>
-          <div class="slide">
-            <img src="/img/Selva-Amazonica.jpg" />
-          </div>
-          <div class="slide">
-            <img src="/img/tucanoo.jpg" />
-          </div>
-          <!-- slide images end -->
-
-          <!-- automatic navigation start -->
-
-          <div class="navigation-auto">
-            <div class="auto-btn1"></div>
-            <div class="auto-btn2"></div>
-            <div class="auto-btn3"></div>
-            <div class="auto-btn4"></div>
-          </div>
-          <!-- automatic navigation end -->
+      <div class="carousel">
+        <div>
+          <img src="/img/familiaonça.webp" />
         </div>
-        <!-- manual navigation start -->
-
-        <div class="navigation-manual">
-          <label for="radio1" class="manual-btn"></label>
-          <label for="radio2" class="manual-btn"></label>
-          <label for="radio3" class="manual-btn"></label>
-          <label for="radio4" class="manual-btn"></label>
-          <!-- manual navigation end -->
+        <div>
+          <img src="/img/florestaa.jpg" />
+        </div>
+        <div>
+          <img src="/img/Selva-Amazonica.jpg" />
+        </div>
+        <div>
+          <img src="/img/tucanoo.jpg" />
         </div>
       </div>
     </div>

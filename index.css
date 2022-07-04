@@ -211,12 +211,15 @@ section .container > * {
   width: 100%;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 .carousel > div {
   flex: none;
   width: 100%;
   scroll-snap-align: start;
+  pointer-events: none;
 }
 
 .carousel > div > img {

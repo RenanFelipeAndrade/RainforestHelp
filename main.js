@@ -25,10 +25,12 @@ window.addEventListener("scroll", () => {
   big_title.style.opacity = -scroll / (header_height / 2) + 1;
   shadow.style.height = `${scroll * 0.5 + 300}px`;
 
-  content.style.transform = `translateY(${(scroll / (section_height + sectionY.top)) * 50 - 50
-    }px)`;
-  image_container.style.transform = `translateY(${(scroll / (section_height + sectionY.top)) * -50 + 50
-    }px)`;
+  content.style.transform = `translateY(${
+    (scroll / (section_height + sectionY.top)) * 50 - 50
+  }px)`;
+  image_container.style.transform = `translateY(${
+    (scroll / (section_height + sectionY.top)) * -50 + 50
+  }px)`;
 
   border.style.width = `${(scroll / (sectionY.top + section_height)) * 30}%`;
 });
@@ -48,8 +50,9 @@ const navSlide = () => {
       if (list.style.animation) {
         list.style.animation = "";
       } else {
-        list.style.animation = `navListFade 0.5s ease forwards ${index / 7 + 0.5
-          }s`;
+        list.style.animation = `navListFade 0.5s ease forwards ${
+          index / 7 + 0.5
+        }s`;
       }
     });
 
@@ -62,12 +65,14 @@ navSlide();
 
 // slider automatic
 
-var counter = 1;
-setInterval(function() {
-  document.getElementById("radio" + counter).checked = true;
-  counter++;
-  if (counter > 4) {
-    counter = 1;
+let counter = 0;
+setInterval(function () {
+  if (counter < 3) {
+    document.querySelector(".carousel").scrollBy(300, 0);
+    counter++;
+  } else {
+    document.querySelector(".carousel").scrollBy(-1200, 0);
+    counter = 0;
   }
 }, 5000);
 

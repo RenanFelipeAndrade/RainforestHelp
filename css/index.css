@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Nav-bar */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #145035;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  gap: .5rem;
+}
+.nav-links > li {
+  display: flex;
+  align-items: center;
+}
+.nav-links > li > a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 3rem;
+}
+.nav-links > li > a:hover,
+.nav-links > li > a.active {
+  background: #ffffff;
+  color: #145035;
+}
+#logo {
+  width: 20%;
+  min-width: 3rem;
+  max-width: 5rem;
+}
+.container {
+  padding: 0 3rem;
+  margin: 0 auto;
+}
+/* Nav-bar end */
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #175737;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 1rem;
+}
+/* Scrollbar end */
+
+/* Main image */
+#sky-mountain-container {
+  background-image: url("/img/sky.png");
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#montain-image {
+  background-image: url("/img/mountain.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Main image end */
+
+/* Page title */
+.big-title {
+  margin-bottom: 6rem;
+  text-align: center;
+  font-size: clamp(3rem, 15vw, 6rem);
+  font-weight: 600;
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(255, 255, 255);
+}
+/* Page title end */
+
+header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.burguer {
+  display: none;
+  cursor: pointer;
+}
+.burguer div {
+  width: 25px;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Content */
+section {
+  background-color: #175737;
+}
+.florest {
+  color: #fff;
+  font-size: 1.25rem;
+  text-align: justify;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 50px;
+
+}
+.title {
+  font-weight: 600;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 3rem;
+  text-decoration: underline;
+}
+.border {
+  position: absolute;
+  width: 70%;
+  height: 3px;
+  background-color: #ffffff;
+  bottom: 0;
+  left: 0;
+}
+.shadow {
+  position: absolute;
+  bottom: 100%;
+  height: 300px;
+  width: 100%;
+  left: 0;
+  z-index: 20;
+  background: linear-gradient(to top, #175737, transparent);
+}
+.opacity {
+  opacity: 0;
+}
+/* Content end */
+
+/* Carousel */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.numbertext2 {
+  color: black;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  margin-bottom: 26px;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* Carousel end */
+
+/*  Support Home */
+.support1 {
+  width: 100%;
+  height: 80vh;
+  background-image: url(/img/caracteristicas-da-arara-de-caninde.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+}
+.support-content {
+  background: rgba(252, 250, 250, 0);
+  backdrop-filter: blur(0.5rem);
+  width: 50%;
+  height: 50%;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  color: #ffffff;
+  margin-left: 0;
+}
+.support1 h1 {
+  text-align: center;
+  color: #fcfcfc;
+  font-weight: bold;
+  padding-bottom: 1.5rem;
+  font-size: 3rem;
+}
+.support-content > p {
+  padding-left: 5rem;
+  text-align: justify;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: bold; 
+}
+.support-content .ctn {
+  text-decoration: none;
+  border-radius: 2rem;
+  background: #175737;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  margin-left: 5rem;
+}
+.ctn:hover {
+  background: #fff;
+  color: #175737;
+}
+/*  Support Home end */
+
+/* Partners */
+.partners {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  background-color: whitesmoke;
+  align-items: center;
+}
+.partners img {
+  width: 120px;
+}
+.partners p {
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+}
+/* Partners end */
+
+/* Footer */
+footer {
+  padding: 2rem 0;
+  background: #ffffff;
+}
+footer .social {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+footer .social a {
+  margin: 1rem;
+  opacity: 0.75;
+}
+footer .social a:hover {
+  opacity: 0.9;
+}
+a img {
+  width: 3rem;
+}
+footer ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+}
+footer ul li a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+  font-weight: bold;
+}
+footer ul li {
+  display: inline-block;
+  padding: 0 1rem;
+}
+footer ul li a:hover {
+  opacity: 1;
+  color: #145035;
+}
+footer .copyright {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #aaa;
+}
+/* Footer end */
+
+/* Media-query Home */
+@media (max-width: 500px) {
+section .container {
+ grid-template-columns: none;
+}
+.content {
+  margin: 1rem;
+}
+.title {
+  font-size: 2rem;
+}
+}

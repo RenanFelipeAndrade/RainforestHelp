@@ -182,7 +182,6 @@ body{
     padding-bottom: 20px;
     font-size: 1.25rem;
 }
-
 .container2 .card:hover {
     background-color: #fff;
     color: #175737;
@@ -206,16 +205,16 @@ body{
     padding-right: 4rem;
     background-color: whitesmoke;
     align-items: center;
-  }
-  .partners img {
+}
+.partners img {
     width: 120px;
-  }
-  .partners p {
+}
+.partners p {
     color: black;
     font-family: "Poppins", sans-serif;
     font-size: 1.5rem;
-  }
-  /* Partners end */
+}
+/* Partners end */
 
 /* Footer */
 footer {

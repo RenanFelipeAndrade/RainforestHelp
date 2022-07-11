@@ -136,7 +136,7 @@ body{
     padding-bottom: 3rem; 
     margin-bottom: 3rem; 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .container2 {
     display: flex;

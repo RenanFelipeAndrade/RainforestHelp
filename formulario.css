@@ -88,7 +88,7 @@ body {
 }
 .box {
     width: 90%;
-    height: 110vh;
+    height: 80vh;
     display: flex;
     margin-bottom: 2rem;
     margin-top: 2rem;
@@ -164,8 +164,8 @@ img {
 textarea {
     margin-top: 1rem;
     padding-left: 10px;
-    width: 500px;
-    height: 150px;
+    width: 850px;
+    height: 300px;
     border-radius: 20px;
 }
 .input-box textarea:hover {
@@ -187,7 +187,7 @@ textarea {
 }
 .input-box label,
 .gender-title h6 {
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #000000c0;
 }
@@ -208,9 +208,9 @@ textarea {
     margin-right: 0.35rem;
 }
 .gender-input label {
-    font-size: 0.81rem;
+    font-size: 1rem;
     font-weight: 600;
-    color: #000000c0;
+    color: #17573a;
 }
 .continue-button button {
     width: 100%;
@@ -226,7 +226,7 @@ textarea {
 }
 .continue-button button a {
     text-decoration: none;
-    font-size: 0.93rem;
+    font-size: 1rem;
     font-weight: 500;
     color: #fff;
 }

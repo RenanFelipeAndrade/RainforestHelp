@@ -121,8 +121,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 0.4rem;
-    margin-top: 0.4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .card {
     height: 500px;
